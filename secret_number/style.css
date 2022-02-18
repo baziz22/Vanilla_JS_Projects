@@ -1,0 +1,54 @@
+@font-face {
+  font-family: Tox;
+  src: url(./Tox\ Typewriter.ttf);
+  /* font-weight: bold; */
+}
+@font-face {
+  font-family: zerovelo;
+  src: url(./zerovelo.ttf);
+  /* font-weight: bold; */
+}
+@font-face {
+  font-family: zerovelo;
+  src: url(./zerovelo.ttf);
+  /* font-weight: bold; */
+}
+@font-face {
+  font-family: zerovelo;
+  src: url(./zerovelo.ttf);
+  /* font-weight: bold; */
+}
+@font-face {
+  font-family: invasion2000;
+  src: url(./invasion2000.ttf);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: 0;
+}
+body {
+  font-family: 'invasion2000', sans-serif;
+}
+#scene {
+  width: 50vh;
+  min-height: 50vh;
+  padding: 2px;
+  margin: 2px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#scene-header {
+  display: flex;
+  justify-content: space-between;
+}
+#scene-body {
+  display: flex;
+  justify-content: space-between;
+}
+#scene-footer {
+  display: flex;
+  justify-content: space-between;
+}

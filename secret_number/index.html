@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Guess a Number</title>
+  </head>
+  <body>
+    <div id="scene">
+      <div id="scene-header">
+        <div id="score">Score:</div>
+        <div id="heighscore">Heigh Score:</div>
+      </div>
+      <div id="scene-body">
+        <div id="message">Start Guessing</div>
+        <input type="number" />
+        <button id="guess-btn">Guess</button>
+      </div>
+      <div id="scene-footer">
+        <button id="reset">Begin - Restart</button>
+        <select id="level" title="levels">
+          <option value="">Beginner</option>
+          <option value="">Medium</option>
+          <option value="">Hard</option>
+        </select>
+      </div>
+    </div>
+    <script src="secret_number.js"></script>
+  </body>
+</html>
