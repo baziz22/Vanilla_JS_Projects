@@ -79,7 +79,7 @@ function gameProcessing() {
   console.log(userInput.value);
   if (userInput.value == secretNumber) {
     displayMessage('You made it!');
-    if (highScoreCalc > maxScore) {
+    if (ScoreCalc > maxScore) {
       highScoreCalc = highScore.textContent;
       highScore.textContent = highScoreCalc;
     } else if (highScoreCalc < maxScore) {

@@ -8,13 +8,13 @@ function startGame() {
     userInput.disabled = false;
     console.log(level.value);
     if (level.value === 'beginner') {
-      secretNumber = Math.ceil(Math.random() * 10);
+      secretNumber = Math.ceil(Math.random() * beginner);
       rule('1 - 10', 10);
     } else if (level.value === 'medium') {
-      secretNumber = Math.ceil(Math.random() * 50);
+      secretNumber = Math.ceil(Math.random() * medium);
       rule('1 - 50', 50);
     } else {
-      secretNumber = Math.ceil(Math.random() * 100);
+      secretNumber = Math.ceil(Math.random() * hard);
       rule('1 - 100', 100);
     }
     console.log(secretNumber);
@@ -61,6 +61,9 @@ begin_btn.textContent = 'Start';
 let secretNumber;
 let secretNumberBox = document.getElementById('the-secret');
 
+let beginner = 10;
+let medium = 50;
+let hard = 100;
 let level = document.getElementById('level');
 let userInput = document.getElementById('guess-box');
 let guess_btn = document.getElementById('guess-btn');
@@ -79,12 +82,12 @@ function gameProcessing() {
   console.log(userInput.value);
   if (userInput.value == secretNumber) {
     displayMessage('You made it!');
-    if (highScoreCalc > maxScore) {
+    if (ScoreCalc > maxScore) {
       highScoreCalc = highScore.textContent;
       highScore.textContent = highScoreCalc;
     } else if (highScoreCalc < maxScore) {
       highScoreCalc = maxScore;
-      highScore.textContent = highScoreCalc;
+      highscore.textContent = highScoreCalc;
     }
     console.log('h-s: ' + highScoreCalc);
     return endGame();
@@ -120,3 +123,9 @@ function endGame() {
 startGame();
 
 // TODO
+// validate not less than zero
+// validate the size of the canvas
+//  style the guess box
+// add lines between divs
+// embed it to other website.
+// make the canvas 5 div columns and add some text to them

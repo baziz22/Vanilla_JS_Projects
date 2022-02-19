@@ -62,7 +62,7 @@ let secretNumber;
 let secretNumberBox = document.getElementById('the-secret');
 
 let level = document.getElementById('level');
-let userInput = document.getElementById('guess-box');
+let userInput = Number(document.getElementById('guess-box').value);
 let guess_btn = document.getElementById('guess-btn');
 // assign max score
 let maxScore;
@@ -77,9 +77,9 @@ highScore.textContent = highScoreCalc;
 guess_btn.addEventListener('click', gameProcessing);
 function gameProcessing() {
   console.log(userInput.value);
-  if (userInput.value == secretNumber) {
+  if (userInput === secretNumber) {
     displayMessage('You made it!');
-    if (highScoreCalc > maxScore) {
+    if (ScoreCalc > maxScore) {
       highScoreCalc = highScore.textContent;
       highScore.textContent = highScoreCalc;
     } else if (highScoreCalc < maxScore) {

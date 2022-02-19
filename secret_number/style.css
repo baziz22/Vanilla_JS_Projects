@@ -1,37 +1,13 @@
-@font-face {
-  font-family: Tox;
-  src: url(./Tox\ Typewriter.ttf);
-  /* font-weight: bold; */
-}
-@font-face {
-  font-family: zerovelo;
-  src: url(./zerovelo.ttf);
-  /* font-weight: bold; */
-}
-@font-face {
-  font-family: zerovelo;
-  src: url(./zerovelo.ttf);
-  /* font-weight: bold; */
-}
-@font-face {
-  font-family: zerovelo;
-  src: url(./zerovelo.ttf);
-  /* font-weight: bold; */
-}
-@font-face {
-  font-family: invasion2000;
-  src: url(./invasion2000.ttf);
-}
 * {
   padding: 0;
   margin: 0;
-  box-sizing: 0;
+  box-sizing: border-box;
 }
 body {
   font-family: 'invasion2000', sans-serif;
 }
 #scene {
-  width: 75vh;
+  min-width: 50vh;
   min-height: 75vh;
   padding: 2px;
   margin: 2px;
@@ -76,4 +52,8 @@ body {
 #reset {
   width: 60px;
   height: 30px;
+}
+
+hr {
+  margin: 0 20px;
 }
