@@ -19,10 +19,10 @@ function startGame() {
   userInput.disabled = true;
   start_btn.addEventListener('click', () => {
     score = 15;
-    document.getElementById('score').textContent = score;
     start_btn.disabled = true;
     guess_btn.disabled = false;
     userInput.disabled = false;
+    console.log(level.value);
     if (level.value === 'beginner') {
       secretNumber = Math.ceil(Math.random() * 10);
       rule('1 - 10', 10);
@@ -33,6 +33,7 @@ function startGame() {
       secretNumber = Math.ceil(Math.random() * 100);
       rule('1 - 100', 100);
     }
+    console.log(secretNumber);
     displayMessage('Start Guessing!!!');
     level.disabled = true;
   });
@@ -75,6 +76,7 @@ function gameProcessing() {
       high_score = score;
       document.getElementById('high-score').textContent = high_score;
     }
+    console.log('h-s: ' + high_score);
     return endGame();
   }
   validateBox();
@@ -82,7 +84,10 @@ function gameProcessing() {
 function wrongAnswer() {
   score--;
   document.getElementById('score').textContent = score;
+  console.log(score);
   if (userInput.value > secretNumber) {
+    console.log('secretNumber: ', secretNumber);
+    console.log('guess  ', userInput.value);
     displayMessage('too high');
     if (score === 0) {
       displayMessage('You Lost!');

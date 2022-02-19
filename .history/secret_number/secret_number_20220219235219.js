@@ -1,6 +1,6 @@
 'use strict';
 let secretNumber;
-let score = 15;
+let score = 20;
 let high_score = 0;
 let start_btn = document.getElementById('start-btn');
 let secretNumberBox = document.getElementById('the-secret');
@@ -18,11 +18,10 @@ function startGame() {
   guess_btn.disabled = true;
   userInput.disabled = true;
   start_btn.addEventListener('click', () => {
-    score = 15;
-    document.getElementById('score').textContent = score;
     start_btn.disabled = true;
     guess_btn.disabled = false;
     userInput.disabled = false;
+    console.log(level.value);
     if (level.value === 'beginner') {
       secretNumber = Math.ceil(Math.random() * 10);
       rule('1 - 10', 10);
@@ -33,6 +32,7 @@ function startGame() {
       secretNumber = Math.ceil(Math.random() * 100);
       rule('1 - 100', 100);
     }
+    console.log(secretNumber);
     displayMessage('Start Guessing!!!');
     level.disabled = true;
   });
@@ -69,26 +69,25 @@ const rule = (between, attrValue) => {
 
 guess_btn.addEventListener('click', gameProcessing);
 function gameProcessing() {
-  if (userInput.value == secretNumber) {
+  console.log(Number(userInput.value), typeof userInput.value);
+  if (guess == secretNumber) {
     displayMessage('You made it!');
-    if (score > high_score) {
-      high_score = score;
-      document.getElementById('high-score').textContent = high_score;
+    if (high_score > score) {
     }
+    console.log('h-s: ' + high_score);
     return endGame();
   }
   validateBox();
 }
 function wrongAnswer() {
   score--;
-  document.getElementById('score').textContent = score;
-  if (userInput.value > secretNumber) {
+  if (guess > secretNumber) {
     displayMessage('too high');
     if (score === 0) {
       displayMessage('You Lost!');
       endGame();
     }
-  } else if (userInput.value < secretNumber) {
+  } else if (guess < secretNumber) {
     displayMessage('too low');
     if (score === 0) {
       displayMessage('You Lost!');
@@ -99,6 +98,7 @@ function wrongAnswer() {
 function endGame() {
   start_btn.disabled = false;
   guess_btn.disabled = true;
+  guess = null;
   userInput.disabled = true;
   level.disabled = false;
   secretNumberBox.textContent = secretNumber;
