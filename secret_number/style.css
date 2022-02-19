@@ -31,8 +31,8 @@ body {
   font-family: 'invasion2000', sans-serif;
 }
 #scene {
-  width: 50vh;
-  min-height: 50vh;
+  width: 75vh;
+  min-height: 75vh;
   padding: 2px;
   margin: 2px;
   border: 1px solid black;
@@ -44,6 +44,14 @@ body {
   display: flex;
   justify-content: space-between;
 }
+#scene-messages {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  text-align: center;
+  align-items: center;
+}
+
 #scene-body {
   display: flex;
   justify-content: space-between;
@@ -51,4 +59,21 @@ body {
 #scene-footer {
   display: flex;
   justify-content: space-between;
+}
+
+#secret-number {
+  width: 30px;
+  height: 30px;
+  margin: 20px;
+  background-color: darkgray;
+  font-size: 30px;
+  color: #fff;
+}
+#message {
+  flex-grow: 3;
+}
+#guess-box,
+#reset {
+  width: 60px;
+  height: 30px;
 }
