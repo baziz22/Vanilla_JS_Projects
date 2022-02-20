@@ -4,14 +4,14 @@
   box-sizing: border-box;
 }
 #scene {
-  min-width: 50vh;
-  min-height: 50vh;
+  max-width: 75vh;
+  min-height: 75vh;
   padding: 20px;
   margin: 2px;
   border: 1px solid black;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 #scene-header {
   display: flex;
@@ -34,18 +34,6 @@
   justify-content: space-between;
 }
 
-#secret-number {
-  width: 30px;
-  height: 30px;
-  margin: 20px;
-  background-color: darkgray;
-  font-size: 30px;
-  color: #fff;
-}
-#message {
-  flex-grow: 3;
-}
-#guess-box,
 #start-btn {
   width: 60px;
   height: 40px;
@@ -53,4 +41,23 @@
 
 hr {
   margin: 5px 20px;
+}
+
+.grid {
+  width: 300px;
+  height: 300px;
+  border: 1px solid black;
+  display: flex;
+  /* flex-wrap: wrap; */
+}
+.grid div {
+  width: 20px;
+  height: 20px;
+}
+.invader {
+  background-color: purple;
+  border-radius: 10px;
+}
+.shooter {
+  background-color: green;
 }
