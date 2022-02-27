@@ -1,0 +1,60 @@
+.form-container {
+  width: 15%;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.form-header {
+}
+
+.form-header h2 {
+}
+
+#register-form {
+}
+
+.form-control {
+  margin-bottom: 5px;
+}
+.form-control label {
+  display: block;
+}
+
+.form-control input {
+}
+
+.form-control.success input {
+  border-color: #3667e3;
+}
+.form-control.error input {
+  border-color: #b33d30;
+}
+
+.form-control i {
+  visibility: hidden;
+  position: absolute;
+  margin: 2px;
+}
+
+.form-control.success i.fa-circle-check {
+  color: #3667e3;
+  visibility: visible;
+}
+.form-control.error i.fa-circle-xmark {
+  color: #b33d30;
+  visibility: visible;
+}
+.form-control small {
+  visibility: hidden;
+  display: block;
+}
+.form-control.error small {
+  color: #b33d30;
+  visibility: visible;
+}
+.register-form button {
+  background-color: rgb(201, 199, 199);
+  border: 2px solid rgb(201, 199, 199);
+  border-radius: 4px;
+  color: #fff;
+}

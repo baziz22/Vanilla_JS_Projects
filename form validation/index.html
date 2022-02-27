@@ -4,7 +4,64 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <script src="script.js" defer></script>
+    <title>Form Validation</title>
   </head>
-  <body></body>
+  <body>
+    <div class="form-container">
+      <div class="form-header">
+        <h2>Register</h2>
+      </div>
+      <form id="register-form" class="register-form">
+        <div class="form-control">
+          <label for="">First Name: </label>
+          <input type="text" placeholder="First Name" id="first-name" />
+          <i class="fa-regular fa-circle-check"></i>
+          <i class="fa-regular fa-circle-xmark"></i>
+          <small></small>
+        </div>
+        <div class="form-control">
+          <label for="">Last Name: </label>
+          <input type="text" placeholder="Last Name" id="last-name" />
+          <i class="fa-regular fa-circle-check"></i>
+          <i class="fa-regular fa-circle-xmark"></i>
+          <small></small>
+        </div>
+        <div class="form-control">
+          <label for="">Username: </label>
+          <input type="text" placeholder="username" id="username" />
+          <i class="fa-regular fa-circle-check"></i>
+          <i class="fa-regular fa-circle-xmark"></i>
+          <small></small>
+        </div>
+        <div class="form-control">
+          <label for="">Email: </label>
+          <input type="email" placeholder="example@gmail.com" id="email" />
+          <i class="fa-regular fa-circle-check"></i>
+          <i class="fa-regular fa-circle-xmark"></i>
+          <small></small>
+        </div>
+        <div class="form-control">
+          <label for="">Password: </label>
+          <input type="password" placeholder="Password" id="password" />
+          <i class="fa-regular fa-circle-check"></i>
+          <i class="fa-regular fa-circle-xmark"></i>
+          <small></small>
+        </div>
+        <div class="form-control">
+          <label for="">Re-Password: </label>
+          <input type="password" placeholder="Repeat Password" id="password2" />
+          <i class="fa-regular fa-circle-check"></i>
+          <i class="fa-regular fa-circle-xmark"></i>
+          <small></small>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
 </html>
