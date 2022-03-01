@@ -1,0 +1,10 @@
+.wrapper {
+  border: 1px solid red;
+  width: 315px;
+  height: 700px;
+}
+button {
+  margin: 0.25px;
+  width: 75px;
+  height: 75px;
+}
