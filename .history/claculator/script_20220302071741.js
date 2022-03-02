@@ -1,16 +1,17 @@
 const display_header = document.querySelectorAll('.equation');
 const display = document.getElementById('.total');
 const display_footer = document.getElementById('.temp-result');
-const numbers = document.querySelectorAll('.number');
+const numbers = document.querySelectorAll('number');
 const btn = document.querySelectorAll('.btn');
 
 const operants = ['=', '+', '-', '*', '/'];
 const equalOperation = '=';
 
 numbers.forEach(el => {
-  el.addEventListener('click', updateDisplay);
+  el.addEventListener('click', updateDisplay());
 });
 
+updateDisplay();
 function clear() {}
 function digitDelete() {}
 

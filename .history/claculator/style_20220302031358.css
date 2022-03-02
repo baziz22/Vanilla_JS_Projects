@@ -1,27 +1,15 @@
-* {
-  box-sizing: border-box;
-}
 .wrapper {
   border: 1px solid black;
-  border-top-right-radius: 10px;
-  border-top-left-radius: 10px;
-  width: 267px;
-  height: 352px;
+  border-radius: 10px;
+  width: 274px;
+  height: 350px;
 }
 #buttons {
-  margin-top: 1px;
   display: flex;
 }
-#left-side {
-  align-items: left;
-  flex: 4;
-}
-#right-side {
-  align-items: right;
-  flex: 1;
-}
 button {
-  border-radius: 5px;
+  margin: 1px;
+  padding: 0;
   width: 50px;
   height: 50px;
 }
@@ -33,7 +21,7 @@ button {
 }
 #display {
   padding: 15px;
-  width: 266px;
+  width: 270px;
   height: 100px;
   text-align: right;
   border-bottom: 1px solid gray;

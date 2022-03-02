@@ -8,7 +8,7 @@ const operants = ['=', '+', '-', '*', '/'];
 const equalOperation = '=';
 
 numbers.forEach(el => {
-  el.addEventListener('click', updateDisplay);
+  el.addEventListener('click', updateDisplay;
 });
 
 function clear() {}

@@ -1,0 +1,18 @@
+.wrapper {
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 385px;
+  height: 530px;
+}
+button {
+  margin: 0.25px;
+  width: 75px;
+  height: 75px;
+  border-radius: 10px;
+}
+#result {
+  width: 315px;
+  height: 150px;
+  border-bottom: 1px solid gray;
+  border-radius: 10px;
+}
