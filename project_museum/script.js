@@ -11,11 +11,11 @@ const projects_info = [
     },
 ];
 
-const project_element = document.querySelector("#projects-live-container");
-
-project_info.forEach((project) => {
+const project_elements = document.getElementById("projects-live-container");
+console.log("Museum Bader Binsunbil")
+projects_info.forEach((project) => {
     project_element = document.createElement("div");
-
+    console.log(project.name);
     project_element.innerHTML = `
         <span class="project-info">${project.number}</span>
         <img src="./images/${project.img_name}" alt="${project.name}" />
@@ -30,5 +30,5 @@ project_info.forEach((project) => {
         </div>
     `;
 
-    project_element.appendChild(project_element);
+    project_elements.appendChild(project_element);
 })
