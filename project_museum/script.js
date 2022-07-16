@@ -6,7 +6,7 @@ const projects_info = [
     },
     {
         number: 2,
-        name: "progress-steps",
+        name: "pie-chart",
         img_name: "2-pie-chart.png",
     },
 ];
